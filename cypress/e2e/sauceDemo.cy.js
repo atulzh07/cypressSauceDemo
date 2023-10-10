@@ -40,19 +40,8 @@ describe('Writing end-to-end test', () => {
         //Note: Unable to visit the saucelabs website through Cypress
     })
     it("Verify Social Links (footer)", () => {
-        cy.get('.social_twitter > a').should('exist')
-        .and('have.attr', 'href')
-        .and('include', 'saucelabs');
-        cy.task('log', 'Footer: Social Handles: Twitter Url is Present ✅');
-        
-        cy.get('.social_facebook > a').should('exist')
-        .and('have.attr', 'href')
-        .and('include', 'saucelabs');
-        cy.task('log', 'Footer: Social Handles: Facebook Url is Present ✅');
-        
-        cy.get('.social_linkedin > a').should('exist')
-        .and('have.attr', 'href')
-        .and('include', 'sauce-labs');
-        cy.task('log', 'Footer: Social Handles: Linkedin Url is Present ✅');
+        cy.socialHandle('twitter', 'sauce');
+        cy.socialHandle('facebook', 'sauce');
+        cy.socialHandle('linkedin', 'sauce');
     })
 })
