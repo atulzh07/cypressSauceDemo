@@ -9,3 +9,10 @@ Cypress.Commands.add("Login", (index) => {
         cy.get('[data-test="login-button"]').click();
     })
 })
+
+Cypress.Commands.add("socialHandle", (socialHandleName, text) => {
+    cy.get(`.social_${socialHandleName} > a`).should('exist')
+    .and('have.attr', 'href')
+    .and('include', text);
+    cy.task('log', `Footer: Social Handles: ${socialHandleName} Url is Present ✅`);
+})
