@@ -10,6 +10,7 @@ module.exports = defineConfig({
         },
       })
     },
+    projectId: "1gwzzr",
     chromeWebSecurity: false,
     env:{
       "PASSWORD": "PASSWORD",
@@ -17,7 +18,6 @@ module.exports = defineConfig({
     },
     specPattern: 'cypress/e2e/*.js',
     watchForFileChanges: false,
-    chromeWebSecurity: false,
     watchForFileChanges: false
   },
   browsers: [
