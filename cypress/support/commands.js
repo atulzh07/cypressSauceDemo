@@ -16,3 +16,11 @@ Cypress.Commands.add("socialHandle", (socialHandleName, text) => {
     .and('include', text);
     cy.task('log', `Footer: Social Handles: ${socialHandleName} Url is Present ✅`);
 })
+
+Cypress.Commands.add("verifyTitleText", (verifyText) => {
+    cy.get('.title').should('have.text', verifyText);
+})
+
+Cypress.Commands.add("enterData", (field, value) => {
+    cy.get(`[data-test="${field}"]`).click().type(value);
+})
