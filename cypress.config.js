@@ -10,7 +10,7 @@ module.exports = defineConfig({
         },
       })
     },
-    projectId: "1gwzzr",
+    projectId: "PROJECTID",
     chromeWebSecurity: false,
     env:{
       "PASSWORD": "PASSWORD",
